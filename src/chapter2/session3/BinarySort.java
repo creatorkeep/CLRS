@@ -1,9 +1,9 @@
 package chapter2.session3;
-
+// binary search
 public class BinarySort {
 	public static void main(String[] args){
 		int[] a = {1,2,3,4,5,6,7,8};
-		System.out.println(binarySearch(a, 8, 0, 7));
+		System.out.println(binarySearch(a, 4, 0, 7));
 		
 	}
 	private static int binarySearch(int[] a, int key, int p, int q){
