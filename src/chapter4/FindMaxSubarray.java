@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FindMaxSubarray {
 	public static void main(String[] args){
 		//test find max crossing array
-		int a[] = {1,2,-3,5,8 };
+		int a[] = {-2, 1, 3, -5, 8};
 		findMaxCrossingSubarray(a, 0, 1, 3);
 		int[] x = findMaxSubarray(a, 0 , a.length-1);
 		System.out.println(Arrays.toString(x));
