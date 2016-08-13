@@ -9,7 +9,7 @@ public class FindMaxSubarray {
 		int b[] = {-2,1};
 		int c[] = {};
 		//test find max crossing array
-		int a[] = {-2, 1, 3, -5, 8};
+		int a[] = {-2, 1, 3, -5, 2};
 		findMaxCrossingSubarray(a, 0, 1, 3);
 		
 		long start = (new Date()).getTime();
