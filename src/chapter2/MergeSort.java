@@ -3,12 +3,13 @@ package chapter2;
 import java.util.Arrays;
 
 public class MergeSort {
+
 	public static int counter = 0;
 	public static int inverse = 0;
 	public static void main(String[] args){
-		//int[] a = {5,6,7,8,1,2,3,4};
-	//	int[] a = {8,7,6,5,4,3,2,1};
-		int[] a = {4,3,2,1};
+		int[] a = {5,6,7,8,1,2,3,4};
+//	int[] a = {8,7,6,5,4,3,2,1};
+	//	int[] a = {4,3,2,1};
 		//merge(a,0,3,a.length-1);
 		mergeSort(a,0,a.length-1);
 		System.out.println("Final Result is " + Arrays.toString(a));
@@ -16,7 +17,6 @@ public class MergeSort {
 		System.out.println("inverse is "+ inverse);
 	}
 	private static int[] mergeSort(int[] a, int p, int r) {
-		
 		int q;
 		if(p<r){
 			q = (p+r)/2;
@@ -28,11 +28,14 @@ public class MergeSort {
 			merge(a,p,q,r);
 		}
 		counter++;
+
 		return a;
 	}
 	
 	private static int[] merge(int[] a, int p, int q, int r) {
+
 		counter++;
+
 		System.out.println("p="+p + "and " + "q=" + q);
 		int n1 = q - p + 1;
 		int n2 = r - q;
@@ -56,6 +59,7 @@ public class MergeSort {
 		// here also
 		for(;i<=r;i++){
 			if(li>left.length-1){
+
 				inverse+= (n1-li);
 				a[i] = right[ri];
 				ri++;
@@ -63,7 +67,7 @@ public class MergeSort {
 				a[i] = left[li];
 				li++;
 			} else if(left[li]<=right[ri] ){
-				
+
 				a[i] = left[li];
 				li++;
 			} else if(right[ri]<left[li]){

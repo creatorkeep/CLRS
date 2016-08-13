@@ -1,11 +1,15 @@
 package chapter2.session3;
 
+// NOT SOLVED YET
 import java.util.Arrays;
 
 public class InsertionSortWithBinarySearch {
 	public static void main(String[] args){
 		int a[] = {8,7,6,5,4,3,2,1};
 		insertionSortWithBinarySearch(a);
+
+		
+
 	}
 	private static int[] insertionSortWithBinarySearch(int[] arr){
 		int length = arr.length;
@@ -36,5 +40,6 @@ public class InsertionSortWithBinarySearch {
 	}
 	
 	
+
 
 }
