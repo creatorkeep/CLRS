@@ -1,18 +1,37 @@
 package chapter4;
 
 import java.util.Arrays;
+import java.util.Date;
 
 public class FindMaxSubarray {
+	static int counter = 0;
 	public static void main(String[] args){
+		int b[] = {-2,1};
+		int c[] = {};
 		//test find max crossing array
 		int a[] = {-2, 1, 3, -5, 8};
 		findMaxCrossingSubarray(a, 0, 1, 3);
+		
+		long start = (new Date()).getTime();
 		int[] x = findMaxSubarray(a, 0 , a.length-1);
+		//int[] x = findMaxSubarray(c, 0 , 0);
+		long end = (new Date()).getTime();
+		System.out.println(end - start);
 		System.out.println(Arrays.toString(x));
+		System.out.println(counter);
 		
 	}
 	private static int[] findMaxSubarray(int[] arr, int low, int high) {
+		counter++;
+		
 		int[] result = new int[3];
+		//allow empty array as input 4.1-4
+		if(arr.length == 0){
+			result[0] = 0;
+			result[1] = 0;
+			result[2] = 0;
+			return result;
+		}
 			
 		if(high == low) {
 			result[0] = low;

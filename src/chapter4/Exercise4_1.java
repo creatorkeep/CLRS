@@ -1,13 +1,18 @@
 package chapter4;
 
 import java.util.Arrays;
+import java.util.Date;
 
 // brutal force solution of find-max-subarray
 public class Exercise4_1 {
 	public static void main(String[] args){
+		int b[] = {-2,1};
 		int[] arr = {-2, 1, 3, -5, 8};
 		int n = arr.length - 1;
+		long start = (new Date()).getTime();
 		brutalForce(arr, 0, n);
+		long end = (new Date()).getTime();
+		System.out.println(end - start);
 		
 	}
 	private static int[] brutalForce(int[] arr, int init, int end){
