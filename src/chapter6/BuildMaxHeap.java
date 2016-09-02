@@ -2,17 +2,6 @@ package chapter6;
 
 import java.util.Arrays;
 
-class MaxHeap {
-	int[] array;
-	int length;
-	int heapSize;
-	public MaxHeap(int[] arr){
-		this.array = arr;
-		this.length = arr.length;	
-		this.heapSize = length;
-	}
-}
-
 public class BuildMaxHeap {
 	public static void main(String[] args) {
 		int[] array = {16, 4, 10, 14, 7, 9, 3, 2, 8, 1};
@@ -22,7 +11,7 @@ public class BuildMaxHeap {
 		System.out.println(Arrays.toString(heapSort(mh)));
 		//System.out.println(Arrays.toString(mh.array));
 	}
-	private static int[] maxHeapify(MaxHeap mh, int i) {
+	protected static int[] maxHeapify(MaxHeap mh, int i) {
 		int[] arr = mh.array;
 		int left = 2 * i + 1;
 		int right = 2 * i + 2;
@@ -46,7 +35,7 @@ public class BuildMaxHeap {
 		
 		return arr;
 	}
-	private static int[] buildMaxHeap(MaxHeap maxheap) {
+	protected static int[] buildMaxHeap(MaxHeap maxheap) {
 		int[] arr = maxheap.array;
 		maxheap.heapSize = maxheap.array.length;
 		for(int i=maxheap.length/2 - 1 ;i>=0; i--) {
@@ -55,7 +44,7 @@ public class BuildMaxHeap {
 		return arr;
 	}
 	
-	private static int[] heapSort(MaxHeap maxheap) {
+	protected static int[] heapSort(MaxHeap maxheap) {
 		buildMaxHeap(maxheap);
 		int[] arr = maxheap.array; 
 		for(int i= maxheap.length - 1; i>=1; i--) {
