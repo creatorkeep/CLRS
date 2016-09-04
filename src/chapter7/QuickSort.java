@@ -8,7 +8,7 @@ public class QuickSort {
 		//partition(arr,0,arr.length-1);
 		quickSort(arr, 0, arr.length-1);
 	}
-	private static int partition(int[] arr, int p, int r) {
+	protected static int partition(int[] arr, int p, int r) {
 		int x = arr[r];
 		int i = p - 1;
 		for(int j=p; j<=r-1; j++){
@@ -27,7 +27,7 @@ public class QuickSort {
 		return i+1;
 	}
 	
-	private static int[] quickSort(int[] arr, int p, int r) {
+	protected static int[] quickSort(int[] arr, int p, int r) {
 		if (p<r) {
 			int q = partition(arr, p, r);
 			quickSort(arr, p, q-1);
