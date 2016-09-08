@@ -20,6 +20,11 @@ public class CountingSort {
 		System.out.println(Arrays.toString(b));
 	}
 	
+	/**
+	 * 
+	 * @param a input array
+	 * @return an array c that each element counts the number of elements smaller than the number of its position
+	 */
 	private static int[] generateTempArray(int[] a) {
 		// find maximum in a
 		int max = findMaxInArray(a);
